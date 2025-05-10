@@ -59,8 +59,6 @@ def servicios():
 @app.route("/fecha")
 def mostrar_fecha():
  ahora = datetime.now().strftime("%d/%m/%Y %H:%M")
-  
- 
  return render_template("index.html", ahora=ahora, paciente= paciente)
 
 # 4
@@ -86,7 +84,7 @@ def lista_pacientes():
  {"nombre": "Luis Martínez", "edad": 45, "servicio": "Pediatría"},
  {"nombre": "Laura Gómez", "edad": 28, "servicio": "Laboratorio"}
  ]
- 
+
  return render_template("index.html", pacientes=pacientes, paciente= paciente)
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 @app.route("/proyecto/")
@@ -96,7 +94,7 @@ def proy():
 @app.route("/pagina2")
 def pagina2():
    return render_template("index.html", paciente= paciente)
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
 @app.route('/grafico1/')
 def grafico1():
 #Datos para el gráfico
@@ -117,7 +115,8 @@ def grafico1():
     return render_template('index1.html', imagen= imagen_base64)
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
+
 @app.route('/grafico_pie/')
 def grafico_pie():
 #Datos para el gráfico
@@ -138,7 +137,7 @@ def grafico_pie():
     return render_template('index1.html', imagen= imagen)
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
 @app.route('/grafico_ventas_productos/')
 def grafico_ventas_productos():
     #Cargar archivo csv
@@ -166,7 +165,7 @@ def grafico_ventas_productos():
     plt.close()
     return render_template('index1.html', imagen= imagen)
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+#>>>>---------------------------------------------------->  
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -181,7 +180,7 @@ def login():
     </form> '''
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
 
 @app.route('/GraficoBarrasVertical')
 def grafico_barras_vertical():
@@ -203,7 +202,7 @@ def grafico_barras_vertical():
         imagen = base64.b64encode(buf.getvalue()).decode('utf8')
         return render_template('index1.html', imagen= imagen)
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
 
 @app.route('/GraficoBarrasHorizontal')
 def grafico_barras_Horizontal():
@@ -226,7 +225,7 @@ def grafico_barras_Horizontal():
         return render_template('index1.html', imagen= imagen)
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+#>>>>---------------------------------------------------->
 
 @app.route('/GraficoPersonalizado')
 def grafico_Personalizado():
