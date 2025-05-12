@@ -28,16 +28,6 @@ body {
     background: #f6b803 ;
 }
 
-/* #cuerpo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 1200px;
-    margin: 15px auto;
-    padding: 0 15px;
-    gap: 20px;
-} */
-
 #head{
     background-image: linear-gradient(180deg, #000 0%, #f6b803 100%);
     height: 120px;
@@ -117,9 +107,13 @@ ul {
 
 
 /*inicia bloque Cuerpo de página responsive*/
-@media (max-width: 600px) {
-    .nav-enlace {
+@media (max-width: 700px) {
+    .navLink {
         flex: 1 1 100%;
+    }
+
+    .article1{
+        flex-direction: column;
     }
 }
 

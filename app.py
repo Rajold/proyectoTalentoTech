@@ -20,22 +20,20 @@ def home():
 @app.route("/pagina2")
 def pagina2():
    return render_template("index.html", paciente= paciente)
-#>>>>---------------------------------------------------->
+#>>>>----------------------------------------------------> 
 
-
-#>>>>---------------------------------------------------->
-
-
-#>>>>---------------------------------------------------->  
-
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/cargar para Inscribir', methods=['GET', 'POST'])
 def login():
     if request.method== 'POST':
-        usuario= request.form['username']
-        return f'Bienvenido, {usuario}'
+        file= request.form['username']
+        return f'Archivo  {file}  fué cargado exitosamente'
     return '''
     <form method= "post">
-    Usuario: <input type= "text" name="username">
+    Cargue su archivo en formato csv para formalizar la inscripción a nuestros eventos: 
+    <br>
+    <br>
+    <input type= "file" name="username">
+    <br>
     <br>
     <input type= "submit" value="Enviar">
     </form> '''
